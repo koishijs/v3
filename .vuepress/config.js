@@ -2,6 +2,7 @@ const { remove: removeDiacritics } = require('diacritics')
 const { resolve } = require('path')
 
 module.exports = {
+  base: '/v3/',
   title: 'Koishi',
   theme: resolve(__dirname, 'theme'),
   bundler: '@vuepress/vite',
