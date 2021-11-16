@@ -185,4 +185,16 @@ module.exports = {
   },
 
   evergreen: () => false,// !context.isProd,
+
+  bundlerConfig: {
+    viteOptions: {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            charset: false,
+          },
+        },
+      },
+    },
+  },
 }

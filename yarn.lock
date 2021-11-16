@@ -1384,7 +1384,7 @@
     markdown-it "^12.2.0"
     markdown-it-container "^3.0.0"
 
-"@vuepress/plugin-docsearch@^2.0.0-beta.23":
+"@vuepress/plugin-docsearch@^2.0.0-beta.27":
   version "2.0.0-beta.27"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-docsearch/-/plugin-docsearch-2.0.0-beta.27.tgz#dea138646d39b72978baebeb20ea49dd08dc2984"
   integrity sha512-r/YTwPfSBCFH4xCCpRKdQCoLpBJr5X9mXPOEJg8mjbeh5BsX1+5mcEDo8Rlk+iUQ+NoHt0KEoooIGnspGn0sEA==
@@ -1449,7 +1449,7 @@
     "@vuepress/core" "2.0.0-beta.27"
     prismjs "^1.25.0"
 
-"@vuepress/plugin-pwa@^2.0.0-beta.23":
+"@vuepress/plugin-pwa@^2.0.0-beta.27":
   version "2.0.0-beta.27"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-pwa/-/plugin-pwa-2.0.0-beta.27.tgz#a8da2268c7a20c30345ac2d29ef3ae0e64e28588"
   integrity sha512-XUbUu5bkJAHJ0ZtOeCXm4/6K9GsbzW5FA06HI2i6UE0wR//IJ+IWlLbKjJbDWBFH5qee3OLB2xKoVdlnosrNHg==
@@ -1462,7 +1462,7 @@
     vue "^3.2.20"
     workbox-build "^6.3.0"
 
-"@vuepress/plugin-register-components@^2.0.0-beta.23":
+"@vuepress/plugin-register-components@^2.0.0-beta.27":
   version "2.0.0-beta.27"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-register-components/-/plugin-register-components-2.0.0-beta.27.tgz#b57f73dfd20accc64fc4b45994dd263f1b151cc7"
   integrity sha512-CZiEdOE5LoGb2rYcfITyPNbpK9AKKsve5amxKw28sgDw00Ssy3cgZc7G0JyqPXlylBh7KJp04+ZWQccr9lpUWw==
@@ -3479,7 +3479,7 @@ vuepress-plugin-medium-zoom@^1.1.9:
   dependencies:
     medium-zoom "^1.0.4"
 
-vuepress-vite@^2.0.0-beta.23:
+vuepress-vite@^2.0.0-beta.27:
   version "2.0.0-beta.27"
   resolved "https://registry.yarnpkg.com/vuepress-vite/-/vuepress-vite-2.0.0-beta.27.tgz#1445efa30aee2d2fcce8a0882ba4fcec1c8e99d0"
   integrity sha512-E09Rbc0RaSlcEbeo3yayctDheb3dQmD28YgRCPwJCa8gpmAyEglE3kEboJYnyufEMpvbNl2nqcubV09ZpX96+Q==
