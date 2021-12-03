@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 查看和编写帮助
+# 帮助系统
 
 ::: tip
 下面的 echo 指令是为了理解方便而举的例子，与 koishi-plugin-common 中实际的 echo 指令并不相同。

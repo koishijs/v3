@@ -1,10 +1,19 @@
 ---
 sidebarDepth: 2
+title: 使用装饰器 (beta)
 ---
 
 # 使用装饰器 <Badge text="beta" type="warning"/>
 
-koishi-dev-utils 允许你使用装饰器开发 Koishi 插件。下面是一个最简单的例子：
+::: tip
+装饰器是 **TypeScript** 中的语法，如果你使用 **JavaScript**，请跳过这一节。
+:::
+
+::: warning
+Koishi v3 的装饰器语法仍处于 beta 阶段，可能存在不稳定与难以预料的行为。
+:::
+
+**koishi-dev-utils** 允许你使用装饰器开发 Koishi 插件。下面是一个最简单的例子：
 
 ```ts
 import { Plugin, PluginContext } from 'koishi-dev-utils'
