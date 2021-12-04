@@ -77,6 +77,7 @@ module.exports = {
         children: [
           '/guide/database.md',
           '/guide/manage.md',
+          '/guide/database-support.md',
         ],
       }, {
         text: '高级',
