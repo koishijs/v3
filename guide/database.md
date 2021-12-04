@@ -128,7 +128,7 @@ await ctx.database.remove('schedule', [id])
 除了获取和删除数据，常用的需求还有添加和修改数据。
 
 ```js
-// 向 schedule 表中添加一行数据，data 是要添加的数据行
+// 向 schedule 表中添加一行数据，row 是要添加的数据行
 // 返回值是添加的行的完整数据（包括自动生成的 id 和默认属性等）
 await ctx.database.create('schedule', row)
 ```
@@ -152,7 +152,7 @@ await ctx.database.update('user', rows, 'onebot')
 
 你也可以使用 ORM API 扩展数据库中的已有表，或者新建数据表。
 
-### 扩展字段
+### 扩展表
 
 向内置的 User 表中注入字段的方式如下：
 
@@ -301,7 +301,7 @@ Tables.extend('schedule', {
 ```
 :::
 
-你也可以对每个字段使用上文中描述过的方法进行更加详细的定义。关于定义新表时的各个配置项请参考 [API 文档](../api/database) 的 `Tables.extend()` 接口。
+你也可以对每个字段使用上文中描述过的方法进行更加详细的定义。关于定义新表时的各个配置项请参考 [API 文档](../api/database.md#tables-extend-name-config)。
 
 ::: tip
 在定义新表时，就不需要关注前文中提到的“不可为空”（Not Nullable）问题了。因为，不论是安装插件还是卸载插件，新表均独立运作，不会给其他表带来不可空的字段，从而引发上述问题。

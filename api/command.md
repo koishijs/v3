@@ -4,7 +4,9 @@ sidebarDepth: 2
 
 # 指令 (Command)
 
-指令系统是 Koishi 的核心功能之一。通过 `ctx.command()` 方法获得的是指令的实例，它含有下面的方法：
+指令系统是 Koishi 的核心功能之一。通过 `ctx.command()` 方法获得的是指令的实例。
+
+指令本身的用法详见 [上下文 API](./context.md#ctx-command-def-desc-config)。它含有下面的方法：
 
 ## Argv 对象
 

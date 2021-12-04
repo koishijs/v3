@@ -34,6 +34,15 @@ ctx.router.get('/path', (ctx, next) => {
 
 一个键值对，保存了当前应用下的所有 Bot 实例。
 
+::: tip
+在使用多机器人时，Koishi 不能保证 `ctx.bots[0]` 的行为一致。因此，如果想要通过这个接口访问单个机器人的 API，请使用以下的形式访问：
+```js
+ctx.bots[`${platform}:${botId}`]
+// 一般而言，platform 可以从 session.platform，而 botId 可以从 session.selfId 获得
+// 不过也有需要从别的地方获取这两个值的情况
+```
+:::
+
 ## 过滤器
 
 有关这里的 API，请参见 [使用上下文](../guide/context.md#使用上下文)。
@@ -206,6 +215,7 @@ type Plugin<U> = PluginFunction<T, U> | PluginObject<T, U>
 - **def:** `string` 指令名以及可能的参数
 - **desc:** `string` 指令的描述
 - **config:** `CommandConfig` 指令的配置
+  - **hidden:** `boolean` 是否在[隐藏指令](../guide/command.md#隐藏指令和选项)，默认为 `false`
   - **checkUnknown:** `boolean` 是否对未知选项进行检测，默认为 `false`
   - **checkArgCount:** `boolean` 是否对参数个数进行检测，默认为 `false`
   - **authority:** `number` 最低调用权限，默认为 `1`
@@ -215,7 +225,7 @@ type Plugin<U> = PluginFunction<T, U> | PluginObject<T, U>
   - **usageName:** `string` 调用标识符，默认为指令名，如果多个指令使用同一个标识符，则它们的调用次数将合并计算
 - 返回值：[`Command`](./command.md) 注册或修改的指令
 
-在当前上下文中注册或修改一个指令。
+在当前上下文中注册或修改一个指令。关于指令的文档详见 [指令 API](./command.md)。
 
 ### ctx.getSelfIds(type?, assignees?)
 
