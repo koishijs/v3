@@ -34,7 +34,7 @@ sidebarDepth: 2
 ### User.extend(getter), Channel.extend(getter) <badge text="deprecated" type="danger"/>
 
 - **getter:** `(type: string, id: string) => object` 新字段的初始化函数，返回值应该是一个由要扩展的字段和它们的默认值构成的键值对
-- 返回值：`void`
+- 返回值: `void`
 
 ::: warning
 此接口已被弃用，请使用 [`Tables.extend()`](#tables-extend-name-config)
@@ -46,7 +46,7 @@ sidebarDepth: 2
 
 - **type:** `string` 平台名
 - **id:** `string` 用户 / 频道标识符
-- 返回值：`User` / `Channel`
+- 返回值: `User` / `Channel`
 
 创建一个新用户 / 频道数据对象。
 
@@ -136,7 +136,7 @@ export interface Field<T> {
 - **table:** `keyof Tables` 注册在 ORM 中的表名
 - **query:** `QueryExpr<Tables[T]> | QueryShorthand` 搜索表达式
 - **modifier:** `QueryModifier<keyof Tables[T]>` 请求修饰符
-- 返回值：`Promise<Tables[T][]>` 用户数据
+- 返回值: `Promise<Tables[T][]>` 用户数据
 
 [获取](../guide/database.md#获取和删除数据) 数据库中的数据。
 
@@ -205,7 +205,7 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 
 - **table:** `keyof Tables` 注册在 ORM 中的表名
 - **query:** `QueryExpr<Tables[T]> | QueryShorthand` 搜索表达式
-- 返回值：`Promise<void>`
+- 返回值: `Promise<void>`
 
 [删除](../guide/database.md#获取和删除数据) 数据库中的数据。
 
@@ -213,7 +213,7 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 
 - **table:** `keyof Tables` 注册在 ORM 中的表名
 - **data:** `Partial<TableType>` 前一个参数 `table` 所对应的数据库的数据结构
-- 返回值：`Promise<TableType>` 添加行的完整数据
+- 返回值: `Promise<TableType>` 添加行的完整数据
 
 向数据库中 [添加](../guide/database.md#添加和修改数据) 数据。
 
@@ -222,7 +222,7 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 - **table:** `keyof Tables` 注册在 ORM 中的表名
 - **data:** `Partial<TableType>[]` 前一个参数 `table` 所对应的数据库的数据结构所构成的数组
 - **key:** `Query.Index<table>` 以非主键来索引要修改的数据作为参考的字段
-- 返回值：`Promise<void>`
+- 返回值: `Promise<void>`
 
 向数据库中 [更新](../guide/database.md#添加和修改数据) 数据。
 
@@ -238,7 +238,7 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 - **type:** `string` 平台名
 - **id:** `string | string[]` 用户标识符
 - **modifier:** `QueryModifier<User.Field>` 请求修饰符
-- 返回值：`Promise<User | User[]>` 用户数据
+- 返回值: `Promise<User | User[]>` 用户数据
 
 向数据库请求用户数据。如果传入的 id 是一个列表，则返回值也应当是一个列表。
 
@@ -251,7 +251,7 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 - **type:** `string` 平台名
 - **id:** `string` 用户标识符
 - **data:** `User` 要修改 / 添加的数据
-- 返回值：`Promise<void>`
+- 返回值: `Promise<void>`
 
 向数据库修改或添加用户数据。
 
@@ -260,7 +260,7 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 - **type:** `string` 平台名
 - **id:** `string | string[]` 频道标识符
 - **modifier:** `QueryModifier<keyof Channel>` 请求修饰符
-- 返回值：`Promise<Channel | Channel[]>` 频道数据
+- 返回值: `Promise<Channel | Channel[]>` 频道数据
 
 向数据库请求频道数据。如果传入的 id 是一个列表，则返回值也应当是一个列表。
 
@@ -269,7 +269,7 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 - **fields:** `ChannelField[]` 请求的字段，默认为全部字段
 - **type:** `string` 平台名，默认为全平台
 - **assignees:** `string[]` 代理者列表，默认为当前运行的全部机器人
-- 返回值：`Promise<Channel[]>` 频道数据列表
+- 返回值: `Promise<Channel[]>` 频道数据列表
 
 向数据库请求被特定机器人管理的所有频道数据。这里的两个参数可以写任意一个，都可以识别。
 
@@ -278,6 +278,6 @@ const rows = await ctx.database.get('schedule', 1, ['id', 'command'])
 - **type:** `string` 平台名
 - **id:** `number` 频道标识符
 - **data:** `Channel` 要修改 / 添加的数据
-- 返回值：`Promise<void>`
+- 返回值: `Promise<void>`
 
 向数据库修改或添加频道数据。

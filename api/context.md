@@ -223,7 +223,7 @@ type Plugin<U> = PluginFunction<T, U> | PluginObject<T, U>
   - **minInterval:** `number` 每次调用最短时间间隔，默认为 `0`
   - **showWarning:** `boolean` 当小于最短间隔时是否进行提醒，默认为 `false`
   - **usageName:** `string` 调用标识符，默认为指令名，如果多个指令使用同一个标识符，则它们的调用次数将合并计算
-- 返回值：[`Command`](./command.md) 注册或修改的指令
+- 返回值: [`Command`](./command.md) 注册或修改的指令
 
 在当前上下文中注册或修改一个指令。关于指令的文档详见 [指令 API](./command.md)。
 
