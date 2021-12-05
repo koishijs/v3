@@ -4,7 +4,9 @@ sidebarDepth: 2
 
 # 指令 (Command)
 
-指令系统是 Koishi 的核心功能之一。通过 `ctx.command()` 方法获得的是指令的实例，它含有下面的方法：
+指令系统是 Koishi 的核心功能之一。通过 `ctx.command()` 方法获得的是指令的实例。
+
+指令本身的用法详见 [上下文 API](./context.md#ctx-command-def-desc-config)。它含有下面的方法：
 
 ## Argv 对象
 
@@ -123,7 +125,7 @@ type FieldCollector<K extends string> =
 - **name:** `string` 指令名以及可能的参数
 - **desc:** `string` 指令的描述
 - **config:** [`CommandConfig`](./context.md#ctx-command) 指令的配置
-- 返回值：`Command` 注册或修改的指令
+- 返回值: `Command` 注册或修改的指令
 
 注册或修改子指令。子指令会继承当期指令的上下文。参见[指令的多级结构](../guide/help.md#指令的多级结构)章节。
 

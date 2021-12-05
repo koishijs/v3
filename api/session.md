@@ -6,6 +6,8 @@ sidebarDepth: 2
 
 会话来源于 Koishi v1 的元信息对象，并在后续的版本中发展成了专门的类并大幅扩展了功能。目前的会话已经参与到了 Koishi 的绝大部分工作。
 
+标有 <Badge text="数据库" vertical="baseline"/> 的 API 需要安装数据库才能使用。
+
 ## 实例属性
 
 你应该已经读过 [事件 (Events)](./events.md) 一章了。由于每个会话都必定表达了一个上报事件，因此上报事件中定义的属性也都可以在 Session 的实例中访问到。此外，也只有来自上报事件的属性才会在序列化中被保留。下面将介绍的实例属性都是无法被序列化的。
@@ -31,20 +33,6 @@ sidebarDepth: 2
 当前应用的 [Database](./database.md#数据库对象) 对象。
 
 ## 实例方法
-
-### session.observeUser(fields?)
-
-观测特定的用户字段，并更新到 [`session.user`](#session-user) 中。
-
-- **fields:** `Iterable<User.Field>`
-- 返回值: `Promise<User.Observed>`
-
-### session.observeChannel(fields?)
-
-观测特定的用户字段，并更新到 [`session.channel`](#session-channel) 中。
-
-- **fields:** `Iterable<Channel.Field>`
-- 返回值: `Promise<Channel.Observed>`
 
 ### session.send(message)
 
@@ -104,12 +92,12 @@ sidebarDepth: 2
 
 ### session.collect(argv, key, fields)
 
-按照 argv 中的 command 属性向 fields 添加所需的用户字段。它是内置的 before-attach-user 和 before-attach-channel 监听器。
-
 - **argv:** `Argv` 只需确保其中存在 command 属性即可
 - **key:** `'user' | 'group'` 用户字段集合
 - **fields:** `Set<string>` 用户字段集合
 - 返回值: `void`
+
+按照 argv 中的 command 属性向 fields 添加所需的用户字段。它是内置的 before-attach-user 和 before-attach-channel 监听器。
 
 ### session.execute(argv, next?)
 
@@ -118,3 +106,35 @@ sidebarDepth: 2
 - 返回值: `Promise<void>`
 
 执行一个指令。可以传入一个 argv 对象或者指令对应的文本。
+
+### session.getUser(id?, authority?, fields?) <Badge text="数据库"/>
+
+- **id**: `string | string[]` 用户标识符
+- **authority**: `number` 未找到该用户时，该用户的默认权限等级
+- **fields?**: `string[]` 需要请求的字段
+- 返回值: `Promise<User>` 用户数据
+
+获取当前会话对应的用户表中的用户数据。
+
+### session.getChannel(id?, selfId?, fields?) <Badge text="数据库"/>
+
+- **id**: `string | string[]` 频道标识符
+- **selfId**: `number` 未找到该频道时，该用户的默认权限等级
+- **fields?**: `string[]` 需要请求的字段
+- 返回值: `Promise<Channel>` 频道数据
+
+获取当前会话对应的频道表中的频道数据。
+
+### session.observeUser(fields?) <Badge text="数据库"/>
+
+- **fields:** `Iterable<User.Field>`
+- 返回值: `Promise<User.Observed>`
+
+观测特定的用户字段，并更新到 [`session.user`](#session-user) 中。
+
+### session.observeChannel(fields?) <Badge text="数据库"/>
+
+- **fields:** `Iterable<Channel.Field>`
+- 返回值: `Promise<Channel.Observed>`
+
+观测特定的用户字段，并更新到 [`session.channel`](#session-channel) 中。

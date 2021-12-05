@@ -21,7 +21,7 @@ module.exports = {
 
   markdown: {
     code: false,
-    slugify (str) {
+    slugify(str) {
       const rControl = /[\u0000-\u001f]/g
       const rSpecial = /[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'“”‘’<>,.?/]+/g
       return removeDiacritics(str)
@@ -56,21 +56,37 @@ module.exports = {
           '/guide/faq.md',
         ],
       }, {
-        text: '进阶',
+        text: '交互',
         isGroup: true,
         children: [
           '/guide/message.md',
           '/guide/context.md',
+        ],
+      }, {
+        text: '指令',
+        isGroup: true,
+        children: [
           '/guide/command.md',
           '/guide/execute.md',
           '/guide/help.md',
-          '/guide/manage.md',
+          '/guide/decorator.md',
+        ],
+      }, {
+        text: '数据库',
+        isGroup: true,
+        children: [
           '/guide/database.md',
+          '/guide/manage.md',
+          '/guide/database-support.md',
+        ],
+      }, {
+        text: '高级',
+        isGroup: true,
+        children: [
           '/guide/lifecycle.md',
           '/guide/adapter.md',
           '/guide/logger.md',
           '/guide/unit-tests.md',
-          '/guide/decorator.md',
         ],
       }],
       '/api': [{

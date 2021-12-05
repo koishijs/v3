@@ -77,7 +77,7 @@ ctx.command('echo <message:text>', '输出收到的信息')
 
 ```js
 ctx.command('bar 一条看不见的指令', { hidden: true })
-  .option('foo', '<text> 一个看不见的选项')
+  .option('foo', '<text> 一个看不见的选项'， { hidden: true })
   .action(({ options }) => 'secret: ' + options.foo)
 ```
 
