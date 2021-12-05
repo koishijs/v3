@@ -36,8 +36,10 @@ ctx.router.get('/path', (ctx, next) => {
 
 ::: tip
 在使用多机器人时，Koishi 不能保证 `ctx.bots[0]` 的行为一致。因此，如果想要通过这个接口访问单个机器人的 API，请使用以下的形式访问：
+
 ```js
 ctx.bots[`${platform}:${selfId}`]
+// platform 为对应机器人的所在平台，而 selfId 为对应机器人的 ID
 // 一般而言，platform 可以从 session.platform，而 selfId 可以从 session.selfId 获得
 // 不过也有需要从别的地方获取这两个值的情况
 ```

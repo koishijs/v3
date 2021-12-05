@@ -119,7 +119,7 @@ sidebarDepth: 2
 ### session.getChannel(id?, selfId?, fields?) <Badge text="数据库"/>
 
 - **id**: `string | string[]` 频道标识符
-- **selfId**: `number` 未找到该频道时，该用户的默认权限等级
+- **selfId**: `string` 未找到该频道时，该频道的 [代理者](../guide/manage.md#平台相关字段) ID
 - **fields?**: `string[]` 需要请求的字段
 - 返回值: `Promise<Channel>` 频道数据
 
