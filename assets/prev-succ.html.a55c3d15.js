@@ -1,0 +1,1 @@
+const e={key:"v-8cceb7c2",path:"/plugins/teach/prev-succ.html",title:"\u524D\u7F6E\u4E0E\u540E\u7EE7\u95EE\u7B54",lang:"en-US",frontmatter:{sidebarDepth:2},excerpt:"",headers:[],filePathRelative:"plugins/teach/prev-succ.md",git:{updatedTime:1637048067e3,contributors:[{name:"Shigma",email:"shigma10826@gmail.com",commits:1}]}};export{e as data};
