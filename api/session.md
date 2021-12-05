@@ -125,10 +125,6 @@ sidebarDepth: 2
 
 获取当前会话对应的频道表中的频道数据。
 
-::: tip
-对于一个会话，它的平台是已知的，所以此处的 `selfId` 不需要冒号及以前的部分。
-:::
-
 ### session.observeUser(fields?) <Badge text="数据库"/>
 
 - **fields:** `Iterable<User.Field>`
