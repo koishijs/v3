@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 帮助系统
+# 查看和编写帮助
 
 ::: tip
 下面的 echo 指令是为了理解方便而举的例子，与 koishi-plugin-common 中实际的 echo 指令并不相同。
@@ -77,7 +77,7 @@ ctx.command('echo <message:text>', '输出收到的信息')
 
 ```js
 ctx.command('bar 一条看不见的指令', { hidden: true })
-  .option('foo', '<text> 一个看不见的选项')
+  .option('foo', '<text> 一个看不见的选项'， { hidden: true })
   .action(({ options }) => 'secret: ' + options.foo)
 ```
 
