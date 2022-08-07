@@ -1,0 +1,1 @@
+const t={key:"v-10f69fe0",path:"/guide/database-support.html",title:"\u7F16\u5199\u6570\u636E\u5E93\u652F\u6301",lang:"en-US",frontmatter:{sidebarDepth:2},excerpt:"",headers:[],filePathRelative:"guide/database-support.md",git:{updatedTime:1638628412e3,contributors:[{name:"i'DLisT",email:"i.dlist@outlook.com",commits:1}]}};export{t as data};

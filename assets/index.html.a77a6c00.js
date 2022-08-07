@@ -1,0 +1,1 @@
+const e={key:"v-667270b2",path:"/plugins/adventure/",title:"\u57FA\u672C\u7528\u6CD5",lang:"en-US",frontmatter:{sidebarDepth:2},excerpt:"",headers:[],filePathRelative:"plugins/adventure/index.md",git:{updatedTime:1637048067e3,contributors:[{name:"Shigma",email:"shigma10826@gmail.com",commits:1}]}};export{e as data};

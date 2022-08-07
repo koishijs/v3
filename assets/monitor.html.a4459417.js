@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as t,b as s,d as i}from"./app.9e111ae1.js";const a={},n={id:"koishi-plugin-monitor",tabindex:"-1"},r=s("a",{class:"header-anchor",href:"#koishi-plugin-monitor","aria-hidden":"true"},"#",-1),c=i(" koishi-plugin-monitor"),_=[r,c];function d(h,l){return t(),o("h1",n,_)}var p=e(a,[["render",d]]);export{p as default};
